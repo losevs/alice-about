@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Алиса AI — что нового</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="gate" data-gate>
+    <form class="gate-card" data-gate-form>
+      <img src="assets/oknik.svg" alt="" width="56" height="56">
+      <h1>Алиса AI</h1>
+      <p>Прототип закрыт паролем</p>
+      <input type="password" name="password" autocomplete="current-password" placeholder="Пароль" required>
+      <button class="btn" type="submit">Войти</button>
+      <p class="gate-error" data-gate-error hidden>Неверный пароль</p>
+    </form>
+  </div>
+  <div class="stage" hidden>
+    <header class="topbar">
+      <img class="logo" src="assets/logo.svg" alt="Алиса">
+      <button class="icon-btn" type="button" data-open="menu" aria-label="Меню">
+        <img src="assets/menu.svg" alt="">
+      </button>
+    </header>
+
+    <main>
+      <section class="hero" id="top">
+        <img class="hero-glow" src="assets/hero-glow.svg" alt="">
+        <div class="bubble" data-try="Алиса AI" data-try-text="привет! я алиса ai просто скажите, что нужно я разберусь">
+          привет! я алиса ai просто скажите, что нужно я разберусь
+        </div>
+
+        <button class="widget studio-widget" type="button" data-tool="Студия" data-tool-text="Удалить фон с фото">
+          <span class="widget-title">Студия</span>
+          <span class="widget-sub">Удалить фон</span>
+          <span class="split">
+            <img src="assets/split-left-2.png" alt="">
+            <img src="assets/split-right.png" alt="">
+            <i></i>
+          </span>
+        </button>
+
+        <img class="face" src="assets/alice-face.png" alt="">
+
+        <button class="memory-widget" type="button" data-goto="#memory">
+          <img class="memory-bg" src="assets/memory-bg.svg" alt="">
+          <img class="memory-corner" src="assets/memory-corner.svg" alt="">
+          <span>Моя память</span>
+          <strong>Записать<br>дело</strong>
+        </button>
+
+        <article class="memo" data-check>
+          <label>
+            <input type="checkbox">
+            <span>Забронировать отель в Токио</span>
+          </label>
+          <p><img src="assets/subtasks.svg" alt=""> 0/3 <em>Сегодня, 18:00</em></p>
+        </article>
+
+        <button class="tools" type="button" data-open="tools">
+          <span>Инструменты</span>
+          <span class="tool-grid">
+            <img src="assets/tool-rubles.svg" alt="">
+            <img src="assets/tool-draw.svg" alt="">
+            <img src="assets/tool-spa.svg" alt="">
+            <img src="assets/tool-food.svg" alt="">
+          </span>
+        </button>
+
+        <button class="note" type="button" data-goto="#memory">
+          <img src="assets/check.svg" alt="">
+          <span>
+            <b>Заметка создана</b>
+            Найдёте её в разделе «Моя память»
+          </span>
+          <em>Перейти</em>
+        </button>
+      </section>
+
+      <section class="block" id="news">
+        <h2>Что нового</h2>
+        <div class="scroller" data-scroller>
+          <article class="news-card">
+            <img class="cover" src="assets/pin.png" alt="">
+            <p>вышел девайс раннего доступа яндекс пин</p>
+            <button class="btn" type="button" data-try="Яндекс Пин" data-try-text="Девайс раннего доступа. Алиса AI всегда под рукой.">попробовать</button>
+            <button class="round" type="button" data-save aria-label="Сохранить">
+              <img src="assets/plus-dark.svg" alt="">
+            </button>
+          </article>
+          <article class="news-card tone">
+            <img class="portrait" src="assets/tolstoy.png" alt="">
+            <p>теперь вы можете поговорить со львом толстым прямо в чате</p>
+            <button class="btn" type="button" data-character="Лев Толстой" data-line="Спрашивайте. Я отвечу так, как умею — прямо и без суеты.">попробовать</button>
+          </article>
+          <article class="news-card photo-card">
+            <img class="cover doctor" src="assets/doctor.png" alt="">
+            <img class="fade" src="assets/glow.svg" alt="">
+            <p class="on-dark">подготовлю к посещению врача</p>
+            <div class="mini-bubble">посмотри анализы, что спросить у врача</div>
+            <button class="btn" type="button" data-try="Визит к врачу" data-try-text="Пришлите анализы — соберу вопросы к приёму.">попробовать</button>
+          </article>
+          <article class="news-card photo-card">
+            <div class="legal">
+              <img src="assets/legal-5.png" alt="">
+              <img src="assets/legal-3.png" alt="">
+            </div>
+            <p class="on-dark">теперь разбираюсь в ваших правах</p>
+            <div class="mini-bubble wide">хочу снять квартиру, найди слабые места в договоре</div>
+            <button class="btn" type="button" data-try="Права" data-try-text="Пришлите договор — отмечу слабые места простым языком.">попробовать</button>
+          </article>
+        </div>
+        <div class="dots" data-dots></div>
+      </section>
+
+      <section class="block" id="tasks">
+        <h2>Раздел Задачи<br>в Алисе AI</h2>
+        <p class="lead">Новый раздел в Алисе AI, в котором можно поручить личное многошаговое дело целиком, а Алиса сама выполнит нужные действия и вернётся с результатом.</p>
+        <div class="actions">
+          <button class="btn" type="button" data-try="Задачи" data-try-text="Опишите дело целиком — Алиса сама пройдёт нужные шаги.">попробовать</button>
+          <button class="more" type="button" data-more>
+            подробнее <img src="assets/plus-dark.svg" alt="">
+          </button>
+        </div>
+        <p class="extra">Например: собрать документы к визе, сравнить клиники и записать вас, или подготовить подарок — с файлами, поиском и звонками.</p>
+        <img class="contacts" src="assets/contacts.png" alt="Контакты: Braden, Poke, Sydney">
+        <p class="caption">Делегируйте задачи, требующие многих шагов</p>
+        <div class="tabs" data-tabs="tasks">
+          <button type="button" class="on" data-tab="files">работа с файлами</button>
+          <button type="button" data-tab="plugins">плагины</button>
+          <button type="button" data-tab="search">поиск</button>
+          <button type="button" data-tab="calls">звонки</button>
+          <button type="button" data-tab="book">бронирование</button>
+        </div>
+        <div class="phone-well" data-phone="tasks"></div>
+      </section>
+
+      <section class="studio" id="studio">
+        <div class="scoop top"></div>
+        <h2><span class="bang">💥</span>Заглядывайте<br>в студию<span class="spark">✨</span></h2>
+        <p>Новый раздел в Алисе AI, в котором можно поручить личное многошаговое дело целиком, а Алиса сама выполнит нужные действия и вернётся с результатом.</p>
+        <div class="actions light">
+          <button class="btn btn-light" type="button" data-try="Студия" data-try-text="Соберите кадр, уберите фон или дорисуйте сцену.">попробовать</button>
+          <button class="more" type="button" data-more>
+            подробнее <img src="assets/plus-light.svg" alt="">
+          </button>
+        </div>
+        <p class="extra">Студия собирает несколько кадров в одну историю: фон, герой и подпись правятся отдельно.</p>
+        <div class="stack">
+          <img class="shot left" src="assets/studio-a.png" alt="">
+          <img class="shot right" src="assets/studio-b.png" alt="">
+          <img class="shot mid" src="assets/studio-c.png" alt="">
+        </div>
+        <div class="scoop bottom"></div>
+      </section>
+
+      <section class="block" id="characters">
+        <h2>Персонажи<br>для общения</h2>
+        <p class="lead">Поплакаться жилеткину, поспорить с витьком, расследовать дело с детективом луговым или спросить мудрого совета у бабы зины — под любое ваше настроение найдётся нужный персонаж. А если нет — создайте своего.</p>
+        <div class="actions">
+          <button class="btn" type="button" data-try="Персонажи" data-try-text="Выберите героя или соберите своего.">попробовать</button>
+          <button class="more" type="button" data-more>
+            подробнее <img src="assets/plus-dark.svg" alt="">
+          </button>
+        </div>
+        <p class="extra">Персонаж помнит ваш разговор и отвечает в своём характере — можно перебивать и возвращаться к теме.</p>
+
+        <div class="rp">
+          <div class="rp-bar">
+            <span class="rp-logo"><img src="assets/oknik.svg" alt=""> Ролплей</span>
+            <button type="button" data-open="search" aria-label="Поиск">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="5.25" stroke="#302b31" stroke-width="1.6"/><path d="M12 12.5 15.2 15.7" stroke="#302b31" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </button>
+          </div>
+          <button class="row-link" type="button" data-open="recents">Недавние чаты ›</button>
+          <div class="recent" data-filter-row="recent">
+            <button type="button" data-character="Эльза-Боб" data-line="Ну что, идём строить замок или сначала селфи?" data-tag="фентези">
+              <img src="assets/char-elsa.svg" alt="">
+              <b>Эльза-Боб</b>
+              <small>Сегодня</small>
+            </button>
+            <button type="button" data-character="Бог сосисок" data-line="Говори. Я слушаю между горчицей и небом." data-tag="фентези">
+              <img src="assets/char-sausage.svg" alt="">
+              <b>Бог сосисок</b>
+              <small>Вчера</small>
+            </button>
+            <button type="button" data-character="Медвежий фарш" data-line="Каша почти готова. Садись, рассказывай, что стряслось." data-tag="история">
+              <img src="assets/char-bear.svg" alt="">
+              <b>Медвежий фарш</b>
+              <small>30 сентября</small>
+            </button>
+          </div>
+          <div class="sort">
+            <button type="button" class="on" data-sort="popular">Популярное</button>
+            <button type="button" data-sort="fresh">Свежее</button>
+            <button class="menu-chip" type="button" data-open="genres">Все ролплеи</button>
+          </div>
+          <div class="chips" data-chips>
+            <button type="button" class="on" data-chip="all">Все</button>
+            <button type="button" data-chip="аниме">Аниме</button>
+            <button type="button" data-chip="фентези">Фентези</button>
+            <button type="button" data-chip="романтика">Романтика</button>
+            <button type="button" data-chip="история">История</button>
+          </div>
+          <div class="grid" data-filter-row="catalog">
+            <button type="button" data-character="Soul Harmony" data-line="Я здесь. Дыши ровнее — и скажи, что болит." data-tag="аниме">
+              <img src="assets/char-soul.svg" alt="">
+              <b>Soul Harmony</b>
+              <small>История · 2 343</small>
+            </button>
+            <button type="button" data-character="Вечера на хуторе близ Диканьки" data-line="Ночь тихая. Если есть история — рассказывайте, я не перебиваю." data-tag="история">
+              <img src="assets/char-sunset.svg" alt="">
+              <b>Вечера на хуторе близ Диканьки</b>
+              <small>История · 2 343</small>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="live" id="live">
+        <img src="assets/live.png" alt="">
+        <div class="live-copy">
+          <h2>Живое общение</h2>
+          <p>Разговор со мной — это живой эмоциональный диалог. Меня можно перебивать, уточнять, возвращаться к прошлой теме — в общем, всё, как в беседе с человеком.</p>
+        </div>
+        <div class="live-bubble">Понимаю тебя</div>
+        <div class="actions light">
+          <button class="btn btn-light" type="button" data-try="Живой диалог" data-try-text="Можно перебивать, уточнять и возвращаться к прошлой теме.">попробовать</button>
+          <button class="more" type="button" data-more>
+            подробнее <img src="assets/plus-light.svg" alt="">
+          </button>
+        </div>
+        <p class="extra">Говорите как человеку: я держу нить разговора и не теряю, о чём мы уже договорились.</p>
+      </section>
+
+      <section class="block memory" id="memory">
+        <div class="memos">
+          <article class="memo tilt" data-check>
+            <label><input type="checkbox"><span>Записать детали обсуждения в холм</span></label>
+            <p><img src="assets/subtasks.svg" alt=""> 0/3 <em>Сегодня, 18:00</em></p>
+          </article>
+          <article class="memo tilt" data-check>
+            <label><input type="checkbox"><span>Продеть веревочку в крепление</span></label>
+            <p><img src="assets/subtasks.svg" alt=""> 0/3 <em>Сегодня, 18:00</em></p>
+          </article>
+          <article class="memo tilt" data-check>
+            <label><input type="checkbox"><span>Забронировать отель в Токио</span></label>
+            <p><img src="assets/subtasks.svg" alt=""> 0/3 <em>Сегодня, 18:00</em></p>
+          </article>
+          <article class="memo tilt" data-check>
+            <label><input type="checkbox"><span>Участвовать в генерации Hero Image и делиться результатами</span></label>
+            <p><img src="assets/subtasks.svg" alt=""> 0/3 <em>Сегодня, 18:00</em></p>
+          </article>
+        </div>
+        <h2>Помнит важное</h2>
+        <p class="lead">Накапливаю знания о вас, чтобы учитывать в следующих разговорах и при выполнении ваших поручений</p>
+        <div class="actions">
+          <button class="btn" type="button" data-try="Память" data-try-text="Скажу, что запомнить — и учту это в следующий раз.">попробовать</button>
+          <button class="more" type="button" data-more>
+            подробнее <img src="assets/plus-dark.svg" alt="">
+          </button>
+        </div>
+        <p class="extra">Память — это не чат, который надо листать. Это дела, даты и факты, к которым можно вернуться одной фразой.</p>
+        <div class="memos bottom">
+          <article class="memo" data-check>
+            <label><input type="checkbox"><span>Туалетную бумагу заказать</span></label>
+          </article>
+          <article class="memo" data-check>
+            <label><input type="checkbox"><span>Исследовать варианты ракурсов для объёмных иммерсивных кадров</span></label>
+            <p><img src="assets/bell.svg" alt=""> 3 Октября, 12:00</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="block" id="remind">
+        <p class="lead strong">Больше не придётся держать в голове даты, факты, задачи, идеи, возникшие в моменте — Алиса AI будет запоминать всё важное за вас и напоминать, когда потребуется</p>
+        <div class="tabs" data-tabs="memory">
+          <button type="button" class="on" data-tab="save">сохраняет</button>
+          <button type="button" data-tab="find">находит в памяти</button>
+          <button type="button" data-tab="remind">напоминает</button>
+          <button type="button" data-tab="context">понимает контекст</button>
+        </div>
+        <div class="phone-well" data-phone="memory"></div>
+      </section>
+
+      <section class="plus" id="plus">
+        <h2>Алиса Плюс</h2>
+        <p>Больше сообщений, приоритет в генерации, hd без ватермарок, новые агенты и персонажи. входит в яндекс плюс.</p>
+        <div class="actions light">
+          <button class="btn btn-light" type="button" data-try="Алиса Плюс" data-try-text="Больше сообщений, HD без ватермарок и новые персонажи. Входит в Яндекс Плюс.">попробовать</button>
+          <button class="more" type="button" data-more>
+            подробнее <img src="assets/plus-light.svg" alt="">
+          </button>
+        </div>
+        <p class="extra">Плюс открывает очередь генерации раньше и убирает знак с готовых кадров.</p>
+        <img class="wand" src="assets/wand.png" alt="">
+      </section>
+
+      <section class="block places" id="places">
+        <h2>Алиса AI живет<br>в разных местах</h2>
+        <div class="place-grid">
+          <button class="place app" type="button" data-place="Приложение Алиса AI" data-place-text="Тот же чат, студия и память — в телефоне.">
+            <span>В приложении<br>Алиса Ai</span>
+            <span class="fake-phone" aria-hidden="true">
+              <b>12:35</b>
+              <small>Привет, Дима!<br>Чем помочь сегодня?</small>
+            </span>
+            <em class="btn btn-light sm" data-download>скачать</em>
+          </button>
+          <button class="place" type="button" data-place="Яндекс Дропс" data-place-text="Короткие видео, в которых Алиса AI уже внутри.">
+            <img src="assets/drops.png" alt="">
+            <span>В Яндекс Дропс — с Алисой AI</span>
+          </button>
+          <button class="place" type="button" data-place="Яндекс Go" data-place-text="Заказать поездку или еду можно прямо из разговора.">
+            <img class="icon" src="assets/go.svg" alt="">
+            <span>В приложении<br>Яндекс Go</span>
+          </button>
+          <button class="place" type="button" data-place="Приложение Яндекс" data-place-text="Алиса AI в общем приложении Яндекса.">
+            <img class="icon" src="assets/yandex.svg" alt="">
+            <span>В приложении<br>Яндекс с Алисой AI</span>
+          </button>
+          <button class="place" type="button" data-place="Яндекс Браузер" data-place-text="Спросите про открытую страницу — Алиса прочитает её вместе с вами.">
+            <img class="icon" src="assets/browser.svg" alt="">
+            <span>В Яндекс Браузере<br>с Алисой AI</span>
+          </button>
+          <button class="place" type="button" data-place="MAX" data-place-text="Чат-бот с Алисой AI в мессенджере MAX.">
+            <img class="icon" src="assets/max.svg" alt="">
+            <span>чат-бот с Алиса AI<br>в MAX</span>
+          </button>
+          <button class="place" type="button" data-place="Telegram" data-place-text="Тот же помощник в Telegram: память, задачи и персонажи.">
+            <img class="icon" src="assets/telegram.svg" alt="">
+            <span>Чат-бот с Алиса AI<br>в Telegram</span>
+          </button>
+          <button class="place site" type="button" data-place="alice.yandex.ru" data-place-text="Полная Алиса AI в браузере — без установки.">
+            <span>На сайте<br>alice.yandex.ru</span>
+            <img src="assets/site.png" alt="">
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <div class="sheet" data-sheet hidden>
+      <button class="scrim" type="button" data-close aria-label="Закрыть"></button>
+      <div class="panel" role="dialog" aria-modal="true">
+        <button class="x" type="button" data-close aria-label="Закрыть">×</button>
+        <div data-sheet-body></div>
+      </div>
+    </div>
+    <div class="toast" data-toast hidden></div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
